@@ -37,7 +37,7 @@ except ImportError:
         return _DEFAULT_CA_CERTS
 
 from nsq import event, protocol
-from .deflate_socket import DeflateSocket
+from .deflate_socket import DeflateSocket, DeflateEncoder
 
 logger = logging.getLogger(__name__)
 
