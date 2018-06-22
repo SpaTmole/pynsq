@@ -7,9 +7,7 @@ import errno
 
 class DeflateSocket(object):
     def __init__(self, socket, level):
-        wbits = -zlib.MAX_WBITS
-        self._decompressor = zlib.decompressobj(wbits)
-        self._compressor = zlib.compressobj(level, zlib.DEFLATED, wbits)
+        self._decompressor = zlib.decompressobj(-zlib.MAX_WBITS)
         self._bootstrapped = None
         self._socket = socket
 
