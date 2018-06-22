@@ -43,4 +43,4 @@ class SnappyEncoder(object):
 
     @staticmethod
     def encode(data):
-	return snappy.StreamCompressor().compress(data)
+        return snappy.StreamCompressor().compress(data)
